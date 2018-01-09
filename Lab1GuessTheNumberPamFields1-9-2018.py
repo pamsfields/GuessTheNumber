@@ -11,11 +11,13 @@ x = random.randint(1,100)
 guess = int(input("Pick a number between 1 and 100 "))
 #user input for game
 while guess != x:
-  if guess > x:
+  if guess < x:
     print("Your guess is too low.")
     input("Pick a number between 1 and 100 ")
-  else guess < x:
-    print("Your guess is too high")
+    break
+  else:
+    print("Your guess is too high.")
     input("Pick a number between 1 and 100 ")
+    break
 
 print("You got it right!")
